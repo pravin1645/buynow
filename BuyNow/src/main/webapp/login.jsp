@@ -54,12 +54,26 @@
 								minlength:"8" required>
 						</div>
 
+						<%
+						String error = request.getParameter("error");
+						if (error != null && error.equals("1")) {
+						%>
+						<p style="color: red;">Invalid username or password. Please
+							try again.</p>
+						<%
+						}
+						%>
+
+
 						<br>
 						<button type="submit" class="btn-login">Login</button>
 
 					</form>
-					<br> <a href="./signup.jsp"> <b><u>Create New Account</u></b></a><br> 
-					<a href="#"> <b> <u> Forgot Password ? </u></b>
+
+
+					<br> <a href="./signup.jsp"> <b><u>Create New
+								Account</u></b></a><br> <a href="#"> <b> <u> Forgot
+								Password ? </u></b>
 				</div>
 			</center>
 		</div>
