@@ -39,11 +39,11 @@
 				<div class="centerform">
 					<h1>Login</h1>
 					<br> <br>
-					<form method="post" class="login">
+					<form action="login" method="post" class="login">
 						<div class="form-input">
 							<lable class="lableuser"> <em><b><i
 									class="fa fa-user-circle"> </i> USERNAME </b></em></lable>
-							<br> <input type="text" name="Username" class="inputuser"
+							<br> <input type="text" name="username" class="inputuser"
 								placeholder="Username" required>
 						</div>
 						<div class="form-input">

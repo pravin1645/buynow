@@ -40,7 +40,7 @@
 				<div class="centerform">
 					<h1>Sign Up</h1>
 					<br> <br>
-					<form method="post" class="dp7" action="">
+					<form action="signup" method="post" class="dp7">
 
 						<lable class="lableuser"><em><b> Full Name</b></em></lable><br>
 						<input type="text" placeholder="Name" id="dp5" required> <br>
