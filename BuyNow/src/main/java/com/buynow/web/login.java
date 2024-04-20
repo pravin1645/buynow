@@ -27,10 +27,12 @@ public class login extends HttpServlet {
 		String password = request.getParameter("password");
 
 		if (userlogin.isValidUser(username, password)) {
-			HttpSession session = request.getSession();
-			session.setAttribute("username", username);
+			HttpSession name_session = request.getSession();
+			
+			
+			name_session.setAttribute("name", username);
 			response.sendRedirect("userhome.jsp");
-			// System.out.println("Hi - "+username);
+			//System.out.println("Hi - "+ username);
 		}
 		/*
 		 * if(username.equals("pravin") && password.equals("pravin")) {
@@ -38,7 +40,7 @@ public class login extends HttpServlet {
 		 */
 		else {
 			response.sendRedirect("login.jsp?error=1");
-			System.out.println("login error");
+			//System.out.println("login error");
 		}
 	}
 

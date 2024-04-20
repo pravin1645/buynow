@@ -29,4 +29,27 @@ public class UserLoginImpl implements UserLogin{
 	        }
 	}
 
+	@Override
+	public Object customer_name(String name) {
+		String query = "SELECT * FROM user_customer WHERE customer_name = ?";
+		try (Connection connection = DBUtil.getConnection();
+	             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+
+	            preparedStatement.setString(1, name);
+	           
+
+	            ResultSet resultSet = preparedStatement.executeQuery();
+	            System.out.println("users name setting");
+
+	            return resultSet.next();
+	        }
+		 catch (SQLException e) {
+	            e.printStackTrace();
+	            return false;
+	        }
+	}
+	
+	
+	
+
 }
